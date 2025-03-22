@@ -4,7 +4,7 @@ import Heading from "../../components/Heading";
 import "./LandingPage.css";
 
 export default function LandingPage() {
-  const router = useNavigate();
+  const navigateTo = useNavigate();
   return (
     <div className="Box">
       <div>
@@ -17,7 +17,7 @@ export default function LandingPage() {
         <Button
           variant="default"
           onClick={() => {
-            router("/signup");
+            navigateTo("/signup");
           }}
         >
           Create Account
@@ -25,7 +25,7 @@ export default function LandingPage() {
         <Button
           variant="secondary"
           onClick={() => {
-            router("/login");
+            navigateTo("/login");
           }}
         >
           Already Registered? Login

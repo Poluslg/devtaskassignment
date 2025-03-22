@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import Input from "../../../components/ui/input/Input";
 import Button from "../../../components/ui/button/Button";
+import { useNavigate } from "react-router-dom";
 export default function Signupform() {
+  const navigateTo = useNavigate();
   const [formData, setFormData] = useState({
     fullname: "",
     number: "",
@@ -22,6 +24,7 @@ export default function Signupform() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
+    navigateTo("/profile");
   };
   return (
     <form

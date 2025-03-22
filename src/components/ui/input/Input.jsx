@@ -6,7 +6,7 @@ export default function Input({
   children,
   className,
   lebel,
-  required,
+  required = false,
   ...props
 }) {
   return (
@@ -21,6 +21,7 @@ export default function Input({
           className ? className : ""
         } ${variant}`}
         {...props}
+        required={required}
       >
         {children}
       </input>
